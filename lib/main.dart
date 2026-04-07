@@ -92,7 +92,7 @@ class _ChartPageState extends State<ChartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Динамика забойного давления (бар) в зависимости от времени (часы)'),
+        title: const Text('Динамика забойного давления в зависимости от времени'),
       ),
       body: Center(
         child: isLoading
@@ -106,12 +106,12 @@ class _ChartPageState extends State<ChartPage> {
                       primaryXAxis: NumericAxis(
                         minimum: 0,
                         maximum: 13,
-                        title: AxisTitle(text: 'X'),
+                        title: AxisTitle(text: 'Время, ч'),
                       ),
                       primaryYAxis: NumericAxis(
                         minimum: 45,
                         maximum: 95,
-                        title: AxisTitle(text: 'Y'),
+                        title: AxisTitle(text: 'Забойное давление, бар'),
                       ),
                       series: <CartesianSeries>[
                         StepLineSeries<ChartPoint, double>(
