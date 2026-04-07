@@ -1,10 +1,27 @@
-# chart
+# Trainer simulator
 
-A new Flutter project.
+Симулятор-тренажер для специалистов механизированной добычи нефти с элементами геймификации
+
+## Запуск проекта
+
+1) Для запуска проекта необходимо настроить окружение Flutter. [Туториал по настройке](https://docs.flutter.dev/install/quick?_gl=1%2An22nsi%2A_ga%2ANTUxNDQxMzA5LjE3NzMyMTI3ODg.%2A_ga_04YGWK0175%2AczE3NzU1NjA0MDAkbzEwJGcwJHQxNzc1NTYwNDAwJGo2MCRsMCRoMA..)
+
+2) Склонируйте репозиторий
+```
+git clone https://github.com/AzaliyaKh/trainer_simulator.git
+```
+
+3)  Установите зависимости:
+```
+flutter pub get
+```
+
+4)  Запустите проект
+```
+flutter run
+```
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
