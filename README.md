@@ -21,6 +21,12 @@ flutter pub get
 flutter run
 ```
 
+5*)  Если возникает ошибка, попробуйте очистить установленные зависимости
+```
+flutter clean
+```
+Далее проделать заново пункты 3-4
+
 ## Getting Started
 
 A few resources to get you started if this is your first Flutter project:
