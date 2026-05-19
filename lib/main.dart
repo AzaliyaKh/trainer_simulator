@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:native_height/native_height.dart';
 
 void main() => runApp(const WellMonitoringApp());
 
@@ -46,7 +47,7 @@ class ChartAssetPath {
 
 class AppText {
   static const dashboardTitle = 'Мониторинг скважин';
-  static const wellName = 'Скважина #1';
+  static const wellName = 'Скважина №1';
   static const metricsTitle = 'Основные показатели';
   static const stepButton = 'Сделать шаг';
   static const statusLabel = 'Статус скважины';
@@ -255,7 +256,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   void _makeStep() {
     setState(() {
-      _oilLevelRatio = 0.18 + _random.nextDouble() * 0.37;
+      _oilLevelRatio = NativeHeight.getHeight().clamp(0.1, 0.75).toDouble();
     });
   }
 

@@ -1,5 +1,5 @@
-name: chart
-description: "A new Flutter project."
+name: native_height_example
+description: "Demonstrates how to use the native_height package."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -28,16 +28,20 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  native_height:
-    path: ./native_height
   flutter:
     sdk: flutter
+
+  native_height:
+    # When depending on this package from a real application you should use:
+    #   native_height: ^x.y.z
+    # See https://dart.dev/tools/pub/dependencies#version-constraints
+    # The example app is bundled with the plugin so we use a path dependency on
+    # the parent directory to use the current plugin's version.
+    path: ../
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  csv: ^8.0.0
-  syncfusion_flutter_charts: ^33.1.46
 
 dev_dependencies:
   flutter_test:
@@ -55,12 +59,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  assets:
-    - assets/data/first.csv
-    - assets/data/second.csv
-    - assets/data/third.csv
 
-  # The following line ensures that the flutter pub add csvMaterial Icons font is
+  # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
